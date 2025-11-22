@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative my-12 lg:my-20 flex flex-col lg:flex-row items-start gap-8">
       {/* Texte */}
-      <div className="lg:w-1/2 pt-4 lg:pt-12">
+      <div className="lg:w-2/3 pt-4 lg:pt-12">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
           Bienvenue sur la plateforme des services universitaires
         </h1>
@@ -27,7 +27,7 @@ export default function Hero() {
       </div>
 
       {/* Image + message */}
-      <div className="lg:w-1/2 relative">
+      <div className="lg:w-1/3 relative">
         <img
           src={IMAGE_URL}
           alt="students"
