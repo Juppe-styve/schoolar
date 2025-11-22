@@ -1,38 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function LoginCard() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
-    <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
-      <div className="flex flex-col items-center gap-2">
-        <div className="bg-white border border-blue-200 rounded-lg px-4 py-2">
-          <span className="text-2xl font-extrabold text-blue-600">eCampus</span>
+    <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl px-10 py-12 flex flex-col">
+      {/* HEADER */}
+      <div className="flex flex-col items-center gap-2 mb-6">
+        <div className="bg-white border border-blue-300 rounded-xl px-6 py-3">
+          <span className="text-3xl font-extrabold text-blue-600">eCampus</span>
         </div>
-        <div className="text-gray-600 mt-2">Bienvenue</div>
+        <div className="text-gray-600 text-sm">Bienvenue</div>
       </div>
 
-      <form className="mt-6 space-y-4">
-        <div>
-          <input
-            type="email"
-            placeholder="Entrer Votre Address Mail"
-            className="w-full px-4 py-3 border border-blue-200 rounded-md placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
-          />
-        </div>
+      {/* FORM */}
+      <form className="flex flex-col gap-4 flex-1">
+        <input
+          type="email"
+          placeholder="Entrer Votre Address Mail"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
 
-        <div>
-          <div className="relative">
-            <input
-              type="password"
-              placeholder="Mot de passe"
-              className="w-full px-4 py-3 border border-blue-200 rounded-md placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
-            />
-            <button
-              type="button"
-              className="absolute right-3 top-3 text-gray-400"
-            >
-              👁️
-            </button>
-          </div>
+        <div className="relative">
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Mot de passe"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10"
+          />
+
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-3 top-3 text-gray-500 hover:text-gray-700 transition"
+          >
+            {showPassword ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.8}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.875 18.825A10.05 10.05 0 0112 19c-5 0-9-3.5-10-8 0-1 .5-2 1-3m3-3A9.96 9.96 0 0112 5c5 0 9 3.5 10 8a9.97 9.97 0 01-4 5.5M3 3l18 18"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.8}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7s-8.268-2.943-9.542-7z"
+                />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            )}
+          </button>
         </div>
 
         <div className="flex items-center justify-between text-sm text-gray-600">
@@ -40,40 +73,37 @@ export default function LoginCard() {
             <input type="checkbox" className="w-4 h-4" />
             Se rappeler de moi
           </label>
-          <a className="text-blue-600">Mot de passe oublié ?</a>
+          <a className="text-blue-600 cursor-pointer">Mot de passe oublié ?</a>
         </div>
 
-        <div className="mt-2">
-          <div className="flex items-center gap-4 border rounded-md p-3">
-            <input type="checkbox" className="w-5 h-5" />
-            <div className="flex-1 text-sm">Je ne suis pas un robot</div>
-            <div className="text-xs text-gray-400">reCAPTCHA</div>
-          </div>
+        <div className="border rounded-lg p-3 flex items-center gap-3">
+          <input type="checkbox" className="w-5 h-5" />
+          <span className="text-sm">Je ne suis pas un robot</span>
+          <img
+            src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+            className="w-10 opacity-70"
+          />
         </div>
 
-        <button className="w-full mt-4 bg-blue-600 text-white py-3 rounded-md font-medium">
+        <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition">
           Se Connecter
         </button>
 
-        <button className="w-full mt-3 bg-gray-100 text-gray-800 py-3 rounded-md flex items-center justify-center gap-3 border">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 48 48"
-          >
-            <path
-              fill="#EA4335"
-              d="M24 9.5c3.54 0 6.24 1.52 8.1 2.78l6.02-6.02C35.7 3.18 30.19 1 24 1 14.97 1 7.4 5.95 3.74 13.09l7.09 5.5C12.97 13.04 18.98 9.5 24 9.5z"
-            />
-          </svg>
+        <button className="w-full bg-white text-gray-700 py-3 rounded-lg flex items-center justify-center gap-3 border shadow-sm hover:bg-gray-50 transition">
+          <img
+            src="https://www.svgrepo.com/show/475656/google-color.svg"
+            className="w-5 h-5"
+          />
           Connexion avec Google
         </button>
       </form>
 
-      <p className="text-center text-sm text-gray-600 mt-6">
+      {/* FOOTER */}
+      <p className="text-center text-sm text-gray-600 mt-8">
         Pas encore de compte ?{" "}
-        <a className="text-blue-600 font-medium">Inscrivez-vous ici</a>
+        <a className="text-blue-600 font-medium cursor-pointer">
+          Inscrivez-vous ici
+        </a>
       </p>
     </div>
   );
