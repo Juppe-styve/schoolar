@@ -6,6 +6,7 @@ const IMAGE_URL =
 export default function Hero() {
   return (
     <section className="relative my-12 lg:my-20 flex flex-col lg:flex-row items-start gap-8">
+      {/* Texte */}
       <div className="lg:w-1/2 pt-4 lg:pt-12">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
           Bienvenue sur la plateforme des services universitaires
@@ -14,16 +15,18 @@ export default function Hero() {
           Accédez à vos documents académiques, gérez vos demandes et bien plus
           encore.
         </p>
+
         <div className="mt-8 flex gap-4">
-          <a className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full shadow border border-gray-200 hover:shadow-lg cursor-pointer">
+          <a className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full shadow hover:shadow-lg cursor-pointer">
             Découvrir eCampus
           </a>
-          <a className="inline-block bg-green-500 text-white px-6 py-3 rounded-full shadow border border-gray-200 hover:shadow-lg cursor-pointer">
+          <a className="inline-block bg-green-500 text-white px-6 py-3 rounded-full shadow hover:shadow-lg cursor-pointer">
             Vérifier un document
           </a>
         </div>
       </div>
 
+      {/* Image + message */}
       <div className="lg:w-1/2 relative">
         <img
           src={IMAGE_URL}
@@ -31,7 +34,8 @@ export default function Hero() {
           className="w-full h-96 sm:h-[520px] lg:h-[560px] rounded-lg object-cover shadow-lg"
         />
 
-        <div className="absolute right-8 bottom-12 z-10 bg-white/90 backdrop-blur-md rounded-2xl px-5 py-4 flex items-center gap-4 shadow-md border border-gray-100 max-w-xs">
+        {/* Bloc professeur à cheval */}
+        <div className="absolute -bottom-6 right-8 bg-white/60 backdrop-blur-md rounded-2xl px-5 py-4 flex items-center gap-4 shadow-md border border-gray-200">
           <img
             src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=60"
             alt="prof"
