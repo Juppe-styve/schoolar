@@ -101,7 +101,7 @@ export default function LoginCard() {
       {/* FOOTER */}
       <p className="text-center text-sm text-gray-600 mt-8">
         Pas encore de compte ?{" "}
-        <a className="text-blue-600 font-medium cursor-pointer">
+        <a href="/signup" className="text-blue-600 font-medium cursor-pointer">
           Inscrivez-vous ici
         </a>
       </p>
