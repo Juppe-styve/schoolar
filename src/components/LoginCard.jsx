@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function LoginCard() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const dashboard = () => {
+    navigate("/dashboard");
+  };
 
   return (
     <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl px-10 py-12 flex flex-col">
@@ -87,11 +92,14 @@ export default function LoginCard() {
           />
         </div>
 
-        <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition">
+        <button
+          onClick={dashboard}
+          className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition cursor-pointer"
+        >
           Se Connecter
         </button>
 
-        <button className="w-full bg-white text-gray-700 py-3 rounded-lg flex items-center justify-center gap-3 border shadow-sm hover:bg-gray-50 transition">
+        <button className="w-full bg-white text-gray-700 py-3 rounded-lg flex items-center justify-center gap-3 border shadow-sm hover:bg-gray-50 transition cursor-pointer">
           <img
             src="https://www.svgrepo.com/show/475656/google-color.svg"
             className="w-5 h-5"
