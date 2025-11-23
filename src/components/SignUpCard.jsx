@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUpCard() {
   const [formData, setFormData] = useState({
@@ -21,10 +22,9 @@ export default function SignUpCard() {
       [e.target.name]: e.target.value,
     });
   };
-
+  const navigator = useNavigate();
   const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    alert("Inscription réussie!");
+    navigator("/register-success");
   };
 
   return (
@@ -46,9 +46,7 @@ export default function SignUpCard() {
         les informations
       </p>
 
-      {/* Form Fields */}
       <div className="space-y-4">
-        {/* Email Étudiant */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Email Étudiant <span className="text-red-500">*</span>
@@ -65,7 +63,6 @@ export default function SignUpCard() {
           />
         </div>
 
-        {/* Email Personnel */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Email Personnel
@@ -80,7 +77,6 @@ export default function SignUpCard() {
           />
         </div>
 
-        {/* Mot de Passe */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Mot de Passe
@@ -105,7 +101,6 @@ export default function SignUpCard() {
           </div>
         </div>
 
-        {/* Répéter Mot de Passe */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Répéter Mot de Passe
@@ -130,7 +125,6 @@ export default function SignUpCard() {
           </div>
         </div>
 
-        {/* Téléphone */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Téléphone
@@ -222,16 +216,14 @@ export default function SignUpCard() {
   `}</style>
         </div>
 
-        {/* Submit Button */}
         <button
           onClick={handleSubmit}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors shadow-lg hover:shadow-xl mt-6"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors shadow-lg hover:shadow-xl mt-6 cursor-pointer"
         >
           Inscription
         </button>
       </div>
 
-      {/* Login Link */}
       <p className="text-center text-sm text-gray-600 mt-6">
         Déjà inscrit ?{" "}
         <a
