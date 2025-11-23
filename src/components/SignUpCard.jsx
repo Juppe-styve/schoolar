@@ -172,19 +172,20 @@ export default function SignUpCard() {
       order: -1;
       color: #6b7280;
     }
-      .phone-wrapper {
-  position: relative;
-  overflow: visible !important;  
-  z-index: 10;
-}
-  .phone-wrapper .react-international-phone-country-selector-dropdown {
-  position: absolute;
-  top: 100%;                    
-  left: auto; 
-  z-index: 9999;            
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+            .phone-wrapper {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .phone-wrapper .react-international-phone-input-container {
+      display: flex;
+      flex-direction: row-reverse;      
+      border: 2px solid #e5e7eb;        
+      border-radius: 0.5rem;
+      overflow: visible !important;                  
+      padding: 0;
+      height: 48px;
+    }
 .custom-phone-input .react-international-phone-input-container {
   position: relative;
   overflow: visible !important;  

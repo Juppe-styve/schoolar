@@ -84,7 +84,6 @@ export default function DemandesDocumentsSection() {
         </div>
 
         <div className="flex items-center justify-between">
-          {/* Graphique circulaire SVG */}
           <div className="relative w-56 h-56 flex items-center justify-center">
             <svg className="w-full h-full transform -rotate-90">
               {documentData.map((doc, index) => {
@@ -123,7 +122,6 @@ export default function DemandesDocumentsSection() {
             </svg>
           </div>
 
-          {/* Légende */}
           <div className="grid grid-cols-2 gap-x-8 gap-y-3 flex-1">
             {documentData.map((doc, index) => (
               <div key={index} className="flex items-center">

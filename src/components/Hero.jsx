@@ -1,7 +1,7 @@
 import React from "react";
 
 const IMAGE_URL =
-  "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=1400&q=80";
+  "https://img.freepik.com/photos-gratuite/groupe-cinq-etudiants-africains-passant-du-temps-ensemble-campus-cour-universite-amis-afro-noirs-etudiant-theme-education_627829-6007.jpg";
 
 export default function Hero() {
   return (

@@ -45,8 +45,8 @@ const SidebarItem = ({ icon: Icon, label, active, badge }) => (
 
 export default function Sidebar() {
   return (
-    <div className="w-64 flex flex-col border-r h-screen bg-white">
-      <div className="p-4 border-b">
+    <div className="w-64 flex flex-col  h-screen bg-white">
+      <div className="p-4 ">
         <div className="flex items-center space-x-1 border border-blue-600 rounded-xl py-2 px-3">
           <MenuSquare size={20} className="text-blue-600" />
           <span className="text-xl font-bold text-blue-600">eCampus</span>
@@ -59,7 +59,7 @@ export default function Sidebar() {
         ))}
       </div>
 
-      <div className="p-4 border-t">
+      <div className="p-4">
         <SidebarItem icon={LifeBuoy} label="Assistance Support" />
       </div>
     </div>

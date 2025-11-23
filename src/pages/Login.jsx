@@ -7,7 +7,6 @@ const BG_IMAGE =
 export default function Login() {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden flex items-center justify-center">
-      {/* image fade RIGHT */}
       <div className="absolute inset-y-0 right-0 w-1/2 hidden lg:block">
         <img
           src={BG_IMAGE}

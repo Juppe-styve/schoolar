@@ -2,7 +2,7 @@ import { Settings, Bell } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center py-4 px-6 bg-white border-b">
+    <header className="flex justify-between items-center py-4 px-6 bg-white">
       <div>
         <h1 className="text-2xl font-bold text-gray-800">
           Bienvenue Sakine INOUSSA !

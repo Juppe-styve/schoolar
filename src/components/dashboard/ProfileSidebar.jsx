@@ -18,32 +18,26 @@ const CalendarDay = ({ day, isCurrentMonth, isToday, isSelected }) => {
 };
 
 export default function ProfileSidebar() {
-  // Jours du calendrier pour Mars 2025
   const calendarDays = [
-    // Février 2025 (Jours précédents)
     { day: 29, current: false },
     { day: 30, current: false },
     { day: 31, current: false },
-    // Mars 2025
     ...Array.from({ length: 31 }, (_, i) => ({
       day: i + 1,
       current: true,
       today: i + 1 === 27,
     })),
-    // Avril 2025 (Jours suivants)
     { day: 1, current: false },
     { day: 2, current: false },
   ];
 
   return (
     <div className="w-80 space-y-6">
-      {/* Carte 1: Profil */}
       <div className="bg-white p-6 rounded-2xl shadow-sm">
         <h3 className="text-sm font-semibold text-gray-700 uppercase mb-4">
           Profil
         </h3>
 
-        {/* Image de profil */}
         <div className="flex justify-center mb-4">
           <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-blue-100 shadow-lg">
             <img
@@ -54,7 +48,6 @@ export default function ProfileSidebar() {
           </div>
         </div>
 
-        {/* Nom et ID */}
         <div className="text-center mb-6">
           <p className="text-xl font-bold text-gray-800">Sakine INOUSSA</p>
           <div className="flex items-center justify-center text-sm text-gray-500 mt-2">
@@ -66,8 +59,7 @@ export default function ProfileSidebar() {
           </div>
         </div>
 
-        {/* Rôles et Appartenance */}
-        <div className="space-y-4 border-t pt-4">
+        <div className="space-y-4 pt-4">
           <div className="flex justify-between items-center">
             <span className="text-xs text-gray-500 uppercase">Demandes</span>
             <span className="font-bold text-gray-800">8 • 03/2025</span>
@@ -85,9 +77,7 @@ export default function ProfileSidebar() {
         </div>
       </div>
 
-      {/* Carte 2: Calendrier */}
       <div className="bg-white p-6 rounded-2xl shadow-sm">
-        {/* Header du calendrier */}
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semibold text-gray-800">Mars 2025</h3>
           <div className="flex space-x-1">
@@ -100,14 +90,12 @@ export default function ProfileSidebar() {
           </div>
         </div>
 
-        {/* Jours de la semaine */}
         <div className="grid grid-cols-7 text-center text-xs text-gray-500 uppercase font-medium mb-3">
           {["LUN", "MAR", "MER", "JEU", "VEN", "SAM", "DIM"].map((day) => (
             <div key={day}>{day}</div>
           ))}
         </div>
 
-        {/* Grille du calendrier */}
         <div className="grid grid-cols-7 gap-1">
           {calendarDays.map((date, index) => (
             <CalendarDay

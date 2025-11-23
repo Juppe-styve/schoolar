@@ -7,10 +7,12 @@ export default function LoginCard() {
   const dashboard = () => {
     navigate("/dashboard");
   };
+  const register = () => {
+    navigate("/register");
+  };
 
   return (
     <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl px-10 py-12 flex flex-col">
-      {/* HEADER */}
       <div className="flex flex-col items-center gap-2 mb-6">
         <div className="bg-white border border-blue-300 rounded-xl px-6 py-3">
           <span className="text-3xl font-extrabold text-blue-600">eCampus</span>
@@ -18,7 +20,6 @@ export default function LoginCard() {
         <div className="text-gray-600 text-sm">Bienvenue</div>
       </div>
 
-      {/* FORM */}
       <form className="flex flex-col gap-4 flex-1">
         <input
           type="email"
@@ -108,10 +109,12 @@ export default function LoginCard() {
         </button>
       </form>
 
-      {/* FOOTER */}
       <p className="text-center text-sm text-gray-600 mt-8">
         Pas encore de compte ?{" "}
-        <a href="/signup" className="text-blue-600 font-medium cursor-pointer">
+        <a
+          onClick={register}
+          className="text-blue-600 font-medium cursor-pointer"
+        >
           Inscrivez-vous ici
         </a>
       </p>

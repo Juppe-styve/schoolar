@@ -41,7 +41,6 @@ export default function RecentRequestsTable() {
         Dernières demandes
       </h3>
 
-      {/* Barre de recherche et filtres */}
       <div className="flex items-center space-x-3 mb-4">
         <div className="flex-1 relative">
           <Search
@@ -64,7 +63,6 @@ export default function RecentRequestsTable() {
         </button>
       </div>
 
-      {/* Tableau */}
       <div className="overflow-x-auto">
         <table className="min-w-full">
           <thead>
