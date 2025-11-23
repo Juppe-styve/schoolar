@@ -6,7 +6,6 @@ const IMAGE_URL =
 export default function Hero() {
   return (
     <section className="relative my-12 lg:my-20 flex flex-col lg:flex-row items-start gap-8">
-      {/* Texte */}
       <div className="lg:w-2/3 pt-4 lg:pt-12">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
           Bienvenue sur la plateforme des services universitaires
@@ -26,7 +25,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Image + message */}
       <div className="lg:w-1/3 relative">
         <img
           src={IMAGE_URL}
@@ -34,7 +32,6 @@ export default function Hero() {
           className="w-full h-96 sm:h-[520px] lg:h-[560px] rounded-lg object-cover shadow-lg"
         />
 
-        {/* Bloc professeur à cheval */}
         <div className="absolute -bottom-6 right-8 bg-white/60 backdrop-blur-md rounded-2xl px-5 py-4 flex items-center gap-4 shadow-md border border-gray-200">
           <img
             src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=60"
