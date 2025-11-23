@@ -18,7 +18,7 @@ export default function LoginCard() {
         <input
           type="email"
           placeholder="Entrer Votre Address Mail"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full px-4 py-2 md:py-3 border border-gray-300 rounded-lg placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
 
         <div className="relative">
@@ -68,15 +68,17 @@ export default function LoginCard() {
           </button>
         </div>
 
-        <div className="flex items-center justify-between text-sm text-gray-600">
+        <div className="flex items-center justify-between text-[12px] text-gray-600">
           <label className="flex items-center gap-2">
-            <input type="checkbox" className="w-4 h-4" />
+            <input type="checkbox" className="w-4 h-3" />
             Se rappeler de moi
           </label>
-          <a className="text-blue-600 cursor-pointer">Mot de passe oublié ?</a>
+          <a className="text-blue-600 cursor-pointer underline">
+            Mot de passe oublié ?
+          </a>
         </div>
-
-        <div className="border rounded-lg p-3 flex items-center gap-3">
+        <hr className="border border-gray-300" />
+        <div className="shadow shadow-gray-300 rounded-lg p-3 flex items-center gap-3">
           <input type="checkbox" className="w-5 h-5" />
           <span className="text-sm">Je ne suis pas un robot</span>
           <img
